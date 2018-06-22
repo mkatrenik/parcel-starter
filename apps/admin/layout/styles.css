@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* * {
+  padding: 0;
+  margin: 0;
+} */
+
+h2 {
+  color: tomato;
+}
+
+.menu a,
+.header a {
+  color: white;
+}
+
+.container {
+  display: grid;
+
+  grid-template-areas:
+    'header header'
+    'menu main'
+    'menu footer';
+  grid-template-columns: minmax(0, 200px) minmax(0, 1fr);
+  grid-column-gap: 20px;
+}
+
+.header {
+  grid-area: header;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(50, 52, 57);
+  color: white;
+  padding: 0 15px;
+}
+.menu {
+  grid-area: menu;
+  background-color: rgb(50, 52, 57);
+  color: white;
+  padding: 0 15px;
+}
+.main {
+  grid-area: main;
+  min-height: 100vh;
+}
